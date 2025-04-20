@@ -21,14 +21,18 @@ const typed = new Typed('.multiple-text', {
     loop: true,
   });
 
-  const joinbtn = document.querySelectorAll('.nav-btn').forEach((btn),()=>{
+  const joinbtn = document.querySelectorAll('.nav-btn');
+console.log(joinbtn);
+
+  joinbtn.forEach((btn) => {
     btn.addEventListener("click", () => {
-        const encodemessage = "hi i am interested to take admission please share the details for further procedure"
-    
-        const link = `https://api.whatsapp.com/send?phone=918017737206&text=${encodemessage}`
-        window.open(link,encodemessage)
-      })
-  })
+      const encodemessage = "hi i am interested to take admission please share the details for further procedure";
+  
+      const link = `https://api.whatsapp.com/send?phone=918017737206&text=${encodeURIComponent(encodemessage)}`;
+      window.open(link, '_blank'); // Open in a new tab
+    });
+  });
+  
 
 
   
