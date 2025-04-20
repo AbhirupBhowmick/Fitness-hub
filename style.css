@@ -132,6 +132,10 @@ span {
     justify-content: center;
     align-items: center;
 }
+.home-content{
+    position: relative;
+    z-index: -1;
+}
 
 .home-content h3 {
     font-size: 5rem;
